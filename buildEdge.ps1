@@ -12,6 +12,7 @@ try{
     }
     $loc = Get-Location
     Invoke-ps2exe $loc\shell.ps1 -outputfile $ShellName -NoConsole -iconFile "edge.ico" -requireAdmin -noOutput -noError -noVisualStyles
+    remove-item shell.ps1
 }catch{
     write-host $Error[0]
 <#        # Try to install ps2exe
